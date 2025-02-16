@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "./input";
 import Time from "./time";
-
+import "./index.css"
 function App(){
   const [search, setsearch] = useState("")
   const [scrambled, setscrambled] = useState("")
@@ -66,7 +66,7 @@ function App(){
   }
 
   function timeOut(){
-    alert("time Out")
+    // alert("time Out")
     setscore(0)
     runLogic()
     restartTime()
@@ -78,11 +78,11 @@ function App(){
 
 
 
-  return <div>
-    <div>
-        <h1>Scrambled word</h1>
-        <h1>hint: firstLetter {selectedword[1]}</h1>
-        <h1>{scrambled}</h1>
+  return <div className="bg-[#000000] h-[100vh] w-[100vw] flex flex-row items-center justify-center">
+    <div className="bg-[#363636] h-[50%] w-[45%] rounded-[12px] p-[20px]">
+        <h1 className="text-center text-[40px] font-semibold text-white">Scrambled...</h1>
+        <h1 className="text-[white] text-[15px]">hint:  starts with...<span className="text-[red] text-[25px]"> {selectedword[0].toLocaleUpperCase()} </span>  </h1>
+        <h1 className="text-center text-[50px] text-[white] ">{scrambled.toUpperCase()}</h1>
         <Input onSubmit={getData}/>
         <Time key={restartTimeKey} onChange={timeOut}/>
         <h1>score: {score}</h1>

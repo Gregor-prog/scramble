@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./index.css"
 function Time(prop) {
   const [time, settime] = useState(30);
 
@@ -22,7 +22,7 @@ function Time(prop) {
 
   return (
     <>
-      <h1>{time}</h1>
+      <h1 className="text-[white] mt-[10px]">TIme left: {time}</h1>
     </>
   );
 }
