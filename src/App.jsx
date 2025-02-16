@@ -35,15 +35,16 @@ function App(){
 
   function getData(data){
     setsearch(data)
+    selectedword == search ? console.log(selectedword,search) : console.log(selectedword,search)
   }
   function correctLogic(){
     alert("correct")
-    words.filter()
+    words = words.filter(word => word !== selectedword)
     runLogic()
   }
 
   function wrongLogic(){
-
+    alert("wrong")
   }
 
   return <div>
