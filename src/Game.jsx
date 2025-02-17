@@ -94,6 +94,7 @@ function Game(){
 
 
   return <div className="bg-[#000000] h-[100vh] w-[100vw] flex flex-row items-center justify-center">
+        <Toaster richColors/>
     <div className="bg-gray-800 sm:h-[50%] sm:w-[50%] rounded-[12px] p-[20px]  h-[350px] w-[100%]">
         <h1 className="text-center text-[40px] font-semibold text-white">Scrambled...</h1>
         <h1 className="text-[white] text-[15px]">hint:  starts with...<span className="text-green-500 text-[25px]"> {selectedword[0]} </span>  </h1>
@@ -101,7 +102,6 @@ function Game(){
         <Input onSubmit={getData}/>
         <Time key={restartTimeKey} onChange={timeOut}/>
         <h1 className="text-[white] mt-[10px]" >score: {score}</h1>
-        <Toaster richColors/>
     </div>
   </div>
 }

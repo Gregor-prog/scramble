@@ -5,7 +5,7 @@ function Input(prop){
 
     function Submit(e){
         e.preventDefault()
-        prop.onSubmit(input)
+        prop.onSubmit(input.toLowerCase())
         setinput("")
     }
 
