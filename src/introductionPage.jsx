@@ -12,7 +12,7 @@ const IntroductionPage = ({ onStartGame }) => {
   useEffect(() => {
       setTimeout(() => {
         setword("scramble".split("").sort(() => Math.random() - 0.5).join(""))
-      }, 500);
+      }, 700);
   })
 
   if (!isVisible) return null; // If not visible, render nothing

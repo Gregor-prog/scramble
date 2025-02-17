@@ -13,13 +13,16 @@ function Game(){
   const [score, setscore] = useState(0)
 
   let words = [
-    "apple", "banana", "grape", "orange", "mango", "peach", "melon", "berry", "lemon", "kiwi",
+    "apple", "banana", "grape", "orange", "lemon", "peach", "melon", "berry", "mango", "kiwi",
     "chair", "table", "sofa", "bed", "lamp", "door", "window", "shelf", "clock", "mirror",
     "water", "bread", "sugar", "honey", "cheese", "butter", "pasta", "pizza", "salad", "cookie",
     "phone", "laptop", "mouse", "screen", "cable", "button", "remote", "speaker", "camera", "charger",
-    "happy", "funny", "lucky", "brave", "kind", "smart", "strong", "quick", "sunny", "quiet",
+    "happy", "funny", "lucky", "brave", "kind", "smart", "quick", "sunny", "quiet", "strong",
     "jump", "run", "walk", "swim", "climb", "read", "write", "draw", "sing", "dance"
   ];
+  
+  
+  
   
 
   let [wordsState, setwordsState] = useState(words)
@@ -59,13 +62,16 @@ function Game(){
     restartTime()
     setscore((prevscore) => prevscore + 1)
 
-    if (score == 10) {
+    if (score == 9) {
       win()
     }
   }
 
   function win(){
     toast.success('congrats, you won!')
+    setTimeout(() => {
+    window.location.reload();
+    }, 1000);
   }
 
   function wrongLogic(){
