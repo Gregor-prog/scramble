@@ -19,7 +19,7 @@ const IntroductionPage = ({ onStartGame }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <div className="bg-gray-800 p-8 rounded-lg text-white max-w-md text-center">
+      <div className="bg-gray-800 p-8 rounded-12 w-[90%] sm:w-[50%] text-white max-w-md text-center">
         <h1 className="text-3xl font-bold mb-4">Welcome to the <span className="text-green-400">{word}</span> Game!</h1>
         <h2 className="text-2xl font-semibold mb-4">Rules of the Game:</h2>
         <ul className="text-left list-disc list-inside mb-6">
