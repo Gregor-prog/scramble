@@ -52,6 +52,7 @@ function Game(){
   function getData(data){
     setsearch(data)
     selectedword == data ? correctLogic() : wrongLogic() 
+    data == null || "" ? empty() : null
   }
 
   function correctLogic(){
@@ -65,6 +66,12 @@ function Game(){
     if (score == 9) {
       win()
     }
+  }
+
+  function empty(){
+    toast.warning('input field is empty')
+    runLogic()
+    restartTime()
   }
 
   function win(){
