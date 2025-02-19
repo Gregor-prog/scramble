@@ -1,8 +1,8 @@
-JavaScript Scramble game
-a word scramble game where players guess and rearrange scrambled or
+# JavaScript Scramble game
+A word scramble game where players guess and rearrange scrambled or
 jumbled word to form the correct word.
 
-Features
+## Features
  * Random word generation
 
  * Timer system
@@ -16,7 +16,7 @@ Features
  * rules of the game to make players know what to do
 
 
-To install this project
+## To install this project
 
 * Clone the repository
 
@@ -26,5 +26,5 @@ To install this project
 
 * run "npm run dev" to start the project on your loval server with port "5173"
 
-Technologies used
+## Technologies used
 HTML,Tailwind CSS, ReactJs, sonner for toast.
